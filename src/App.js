@@ -87,7 +87,7 @@ class App extends Component {
   //       console.log(err);
   //       this.setState({ error: `${err.message}: ${err.message.data}` });
   //     }
-  //   }  
+  //   }
 
   // //   For Joke Component
 
@@ -105,7 +105,7 @@ class App extends Component {
   // Render compenent -- shouldn't need bootstrap.
 
   render() {
-    // const { isAuthenticated } = this.props.auth0;    
+    // const { isAuthenticated } = this.props.auth0;
     console.log('render method runs');
     return (
       <>
