@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Quote from './Quote';
 import './App.css';
+// import Mood from './Mood';
+// import Profile from './Profile';
+// import Weather from './Weather';
+// import Jokes from './Jokes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Use for the main stream line component. Should have low functions, high imports for render.
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    console.log('constructor runs');
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount runs');
+  }
+
+  // Render compenent -- shouldn't need bootstrap.
+
+  render() {
+    console.log('render method runs');
+    return (
+      <div>
+        {/* <h1>Hello</h1> */}
+        <Quote/>
+      </div>
+    );
+  }
 }
 
 export default App;
