@@ -21,7 +21,7 @@ import Nav from 'react-bootstrap/Nav';
 // __ DONE__
 // main profile page
 
-console.log('Figureing out where i can start');
+console.log('Figuring out where i can start');
 const UserProfile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
@@ -40,7 +40,7 @@ const UserProfile = () => {
 };
 const LogoutButton = () => {
   const { logout } = useAuth0();
-  return <Button variant="dark" onClick={() => logout({ returnTo: window.location.origin })}> Log Out </Button>
+  return <Button variant="dark" onClick={() => logout({ returnTo: window.location.origin })}> Log Out </Button>;
 };
 
 
