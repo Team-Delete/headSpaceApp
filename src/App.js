@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Quote from './Quote';
 import './App.css';
-import Mood from './Mood';
 import Profile from './Profile';
 import AboutUs from './AboutUs';
 import Home from './Home';
+import Jokes from './Jokes';
 import { withAuth0 } from '@auth0/auth0-react';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom';
+
 
 
 class App extends Component {
@@ -35,11 +35,10 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth0;
     return (
       <>
-        <Quote />
         <Router>
           <Switch>
             <Route
-              exact path="/">{isAuthenticated ? <Home /> : <Profile />}
+              exact path="/">{isAuthenticated ? <Profile /> : <Profile />}
             </Route>
             <Route exact path="/Profile">
               <Profile />
@@ -47,8 +46,11 @@ class App extends Component {
             <Route exact path="/AboutUs">
               <AboutUs />
             </Route>
-            <Route exact path="/Mood">
-              <Mood />
+            <Route exact path="/Jokes">
+              <Jokes />
+            </Route>
+            <Route exact path="/Home">
+              <Home />
             </Route>
           </Switch>
         </Router>
