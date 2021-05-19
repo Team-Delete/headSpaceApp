@@ -4,13 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 
-// function handleStateChange
-//   document.body.style.backgroundcolor
-// }
+import { Auth0Provider } from '@auth0/auth0-react';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Auth0Provider
+    domain="dev-fb0m2j2w.us.auth0.com"
+    clientId="BiEq3SdbtKIrsCA1XxtGsYVUW57GKXqD"
+    redirectUri={window.location.origin}
+  >
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Auth0Provider>,
+  document.getElementById("root")
 );

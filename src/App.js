@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
-// import Quote from './Quote';
 import './App.css';
-// import Mood from './Mood';
-// import Profile from './Profile';
-// import Weather from './Weather';
+import Profile from './Profile';
+import AboutUs from './AboutUs';
+import Home from './Home';
 import Jokes from './Jokes';
-import Weather from './Weather';
-// import axios from 'axios';
-// import { withAuth0 } from '@auth0/auth0-react';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route
-// } from 'react-router-dom';
-// import Weather from './Weather';
-// import Jokes from './Jokes';
-// temp imports to render weather
-// import Error from './Error';
-// import Form from 'react-bootstrap/Form';
-// import Button from 'react-bootstrap/Button';
-// import WeatherDay from './WeatherDay';
+import { withAuth0 } from '@auth0/auth0-react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
-// Use for the main stream line component. Should have low functions, high imports for render.
+
 
 class App extends Component {
   constructor(props) {
@@ -36,16 +26,34 @@ class App extends Component {
     console.log('componentDidMount runs');
   }
 
+
   render() {
-    
-    console.log('render method runs');
+    const { isAuthenticated } = this.props.auth0;
     return (
       <>
-        <Jokes jokeData={this.state.jokeData} />
-        <Weather />
+        <Router>
+          <Switch>
+            <Route
+              exact path="/">{isAuthenticated ? <Profile /> : <Profile />}
+            </Route>
+            <Route exact path="/Profile">
+              <Profile />
+            </Route>
+            <Route exact path="/AboutUs">
+              <AboutUs />
+            </Route>
+            <Route exact path="/Jokes">
+              <Jokes />
+            </Route>
+            <Route exact path="/Home">
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
       </>
     );
   }
 }
 
-export default App;
+export default withAuth0(App);
+
