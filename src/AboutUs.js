@@ -10,7 +10,11 @@ class AboutUs extends React.Component {
         <NavBar />
 =======
         <h2>Hello, About us</h2>
+<<<<<<< HEAD
 >>>>>>> dev
+=======
+        <NavBar />
+>>>>>>> 9bf545289c51448f8fe28ac6b15c962160869593
       </>
     );
   }

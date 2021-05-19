@@ -20,6 +20,7 @@
     "node": true
   },
   "rules": {
+    "react/prop-types": "off",
     "eol-last": "error",
     "eqeqeq": [
       "error",

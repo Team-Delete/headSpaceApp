@@ -16,7 +16,11 @@ class Home extends Component {
 
         <Quote />
         {/* <MoodRing /> */}
+<<<<<<< HEAD
         <NavBar />
+=======
+        {/* <NavBar /> */}
+>>>>>>> 9bf545289c51448f8fe28ac6b15c962160869593
 
         <a rel="nofollow" href="https://HeadSpaceApp.netlify.app"><img src="https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2FHeadSpaceApp.netlify.app&chs=180x180&choe=UTF-8&chld=L|2" alt="Login Here" /> </a>
       </>
