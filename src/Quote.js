@@ -20,6 +20,20 @@ class Quote extends Component {
     this.getQuote();
   }
 
+  // getQuote() {
+  //   axios.get('https://zenquotes.io/api/quotes')
+  //     .then(res => {
+  //       let data = res.data.quotes;
+  //       let quoteNum = Math.floor(Math.random() * data.length);
+  //       let randomQuote = data[quoteNum];
+
+  //       this.setState({
+  //         quote: randomQuote['text'],
+  //         author: randomQuote['author']
+  //       });
+  //     });
+  // }
+
   getQuote() {
     axios.get('https://goquotes-api.herokuapp.com/api/v1/all/quotes')
       .then(res => {
