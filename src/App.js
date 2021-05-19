@@ -16,13 +16,9 @@ import {
 class App extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    // city: '',
-    // cityData: {},
-    // weatherData: [],
-    // // movieData: [],
-    // searchedYet: false
-    // };
+    this.state = {
+      error: false,
+    };
     console.log('constructor runs');
   }
 
