@@ -15,6 +15,12 @@ class MoodRing extends React.Component {
         setColors("button");
       }
     };
+
+    const changeBgColor = (color) => {
+        return document.body.style.backgroundColor = color
+    }
+
+    <button type="button" onClick={changeBgColor('red')}>Mad</button>
   
     console.log(active);
     return (
