@@ -10,6 +10,7 @@
     "auth0": "^2.34.2",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "eslint-plugin-react": "^7.23.2",
     "express": "^4.17.1",

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MoodRing</title>
+  <style>
+    body{
+      background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    }
+      
+    div{
+      width: 25%; height: 50px;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    #a{ flex: 1; background: #e74c3c; color: #e74c3c; }
+    #b{ flex: 1; background: #e67e22; color: #e67e22; }
+    #c{ flex: 1; background: #f1c40f; color: #f1c40f; }
+    #d{ flex: 1; background: #2ecc71; color: #2ecc71; }
+    #e{ flex: 1; background: #3498db; color: #3498db; }
+    #f{ flex: 1; background: #fd79a8; color: #fd79a8; }
+    #g{ flex: 1; background: #8e44ad; color: #8e44ad; }
+    #h{ flex: 1; background: #964B00; color: #964B00; }
+    #i{ flex: 1; background: #2d3436; color: #2d3436; }
+    #j{ flex: 1; background: #ffffff; color: #ffffff; }
+
+  </style>
+</head>
+<body>
+
+<div>
+  <a onclick="bgchange(id)" id="a">#e74c3c</a>
+  <a onclick="bgchange(id)" id="b">#e67e22</a>
+  <a onclick="bgchange(id)" id="c">#f1c40f</a>
+  <a onclick="bgchange(id)" id="d">#2ecc71</a>
+  <a onclick="bgchange(id)" id="e">#3498db</a>
+  <a onclick="bgchange(id)" id="f">#fd79a8</a>
+  <a onclick="bgchange(id)" id="g">#8e44ad</a>
+  <a onclick="bgchange(id)" id="h">#964B00</a>
+  <a onclick="bgchange(id)" id="i">#2d3436</a>
+  <a onclick="bgchange(id)" id="j">#ffffff</a>
+</div>
+
+<script>
+
+const bgchange = (id) => {
+  document.body.style.background = document.getElementById(id).innerHTML;
+}
+
+</script>
+</body>
+</html>
