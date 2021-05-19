@@ -6,7 +6,7 @@ class Mood extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
+      email: 'kassie.r.bradshaw@gmail.com',
       mood: '',
       note: '',
       moodsArr: [],
@@ -23,15 +23,16 @@ class Mood extends React.Component {
 
   getUsersMoods = async() => {
     const SERVER = process.env.REACT_APP_BACKEND;
-    const moods = await axios.get(`${SERVER}/users`, {params: {email: 'kassie.r.bradshaw@gmail.com'}});
-    console.log('this is the returned data for moods', moods);
-    this.setState({moodsArr: moods});
+    const moods = await axios.get(`${SERVER}/moods/${this.state.email}`);
+    //  {params: {email: this.state.email}});
+    console.log('this is the returned data for moods', moods.data);
+    this.setState({moodsArr: moods.data});
   }
 
   render() {
     return (
       <Container>
-        <p>Here is a thing</p>
+        
       </Container>
     );
   }
