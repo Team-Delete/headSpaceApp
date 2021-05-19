@@ -40,17 +40,17 @@ class App extends Component {
             <Route
               exact path="/">{isAuthenticated ? <Profile /> : <Profile />}
             </Route>
+            <Route exact path="/Home">
+              <Home />
+            </Route>
             <Route exact path="/Profile">
               <Profile />
-            </Route>
-            <Route exact path="/AboutUs">
-              <AboutUs />
             </Route>
             <Route exact path="/Jokes">
               <Jokes />
             </Route>
-            <Route exact path="/Home">
-              <Home />
+            <Route exact path="/AboutUs">
+              <AboutUs />
             </Route>
           </Switch>
         </Router>

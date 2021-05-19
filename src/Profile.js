@@ -6,22 +6,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 
-
-// TO DO //
-
-// Auth0 main frame for initalizing user component
-// axios call for mood updating
-
-// internal links for further page navigation
-
-// QR code in comming and out going linkage
-
-// bootstrap required
-
-// __ DONE__
-// main profile page
-
-console.log('Figureing out where i can start');
 const UserProfile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
@@ -30,11 +14,11 @@ const UserProfile = () => {
   }
   return (
     isAuthenticated && (
-      <>
+      <div id="profileInfo">
         <img id="Picture" src={user.picture} alt={user.name} />
         <h2>{user.name}</h2>
         <p>{user.email}</p>
-      </>
+      </div>
     )
   );
 };
@@ -48,11 +32,6 @@ const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
   return <Button variant="dark" onClick={() => loginWithRedirect()}>Log In</Button>;
 };
-
-
-
-console.log('IM working here');
-
 
 class Profile extends React.Component {
   render() {
@@ -84,4 +63,5 @@ class Profile extends React.Component {
     );
   }
 }
+
 export default withAuth0(Profile);
