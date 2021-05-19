@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Red {
+  background-color: #e74c3c;
+  color: #fff;
+}
+.Orange {
+  background-color: #e67e22;
+  color: #fff;
+}
+.Yellow {
+  background-color: #f1c40f;
+  color: #333;
+}
+.Green {
+  background-color: #2ecc71;
+  color: #fff;
+}
+.Blue {
+  background-color: #3498db;
+  color: #fff;
+}
+.Pink {
+  background-color: #fd79a8;
+  color: #fff;
+}
+.Purple {
+  background-color: #8e44ad;
+  color: #333;
+}
+.Brown {
+  background-color: #964B00;
+  color: #fff;
+}
+.Black {
+  background-color: #2d3436;
+  color: #fff;
+}
+.White {
+  background-color: #ffffff;
+  color: #fff;
+}
+.btn {
+  background-color: red;
+  color: #fff;
+}
+.button {
+  padding: 10px 15px;
+  border: 1px solid #eee;
+  margin: 10px;
+}

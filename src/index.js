@@ -3,14 +3,20 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
+import { Auth0Provider } from '@auth0/auth0-react';
+// import {BrowserRouter} from 'react-router-dom';
 
 // function handleStateChange
 //   document.body.style.backgroundcolor
 // }
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Auth0Provider
+    domain="dev-fb0m2j2w.us.auth0.com"
+    clientId="BiEq3SdbtKIrsCA1XxtGsYVUW57GKXqD"
+    redirectUri={window.location.origin}
+  >
     <App />
-  </React.StrictMode>,
+  </Auth0Provider>,
   document.getElementById('root')
 );
