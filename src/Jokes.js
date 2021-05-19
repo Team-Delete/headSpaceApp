@@ -20,7 +20,7 @@ class Jokes extends React.Component {
   }
 
   handleMoodSubmit = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     try {
       this.getJoke();
     } catch (err) {
