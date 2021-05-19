@@ -19,15 +19,15 @@ class Jokes extends React.Component {
     }
   }
 
-  // handleMoodSubmit = async (event) => {
-  //   // event.preventDefault();
-  //   try {
-  //     this.getJoke();
-  //   } catch (err) {
-  //     console.log(err);
-  //     this.setState({ error: `${err.message}: ${err.message.data}` });
-  //   }
-  // }
+  handleMoodSubmit = async (event) => {
+    // event.preventDefault();
+    try {
+      this.getJoke();
+    } catch (err) {
+      console.log(err);
+      this.setState({ error: `${err.message}: ${err.message.data}` });
+    }
+  }
 
   render() {
     return (

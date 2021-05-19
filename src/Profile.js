@@ -38,10 +38,17 @@ const UserProfile = () => {
     )
   );
 };
+<<<<<<< HEAD
 // const LogoutButton = () => {
 //   const { logout } = useAuth0();
 //   return <Button variant="dark" onClick={() => logout({ returnTo: window.location.origin })}> Log Out </Button>;
 // };
+=======
+const LogoutButton = () => {
+  const { logout } = useAuth0();
+  return <Button variant="dark" onClick={() => logout({ returnTo: window.location.origin })}> Log Out </Button>;
+};
+>>>>>>> dev
 
 
 const LoginButton = () => {
@@ -59,8 +66,12 @@ class Profile extends React.Component {
     // const { isAuthenticated } = this.props.auth0;
     return (
       <>
+<<<<<<< HEAD
         {/* {isAuthenticated ? '' : <Modal.Dialog> */}
         <Modal.Dialog>
+=======
+        {isAuthenticated ? '' : <Modal.Dialog>
+>>>>>>> dev
           <Modal.Header closeButton>
             <Modal.Title>HeadSpace</Modal.Title>
           </Modal.Header>
@@ -70,19 +81,31 @@ class Profile extends React.Component {
           <Modal.Footer>
             <LoginButton />
           </Modal.Footer>
+<<<<<<< HEAD
         </Modal.Dialog>
         {/* </Modal.Dialog>} */}
 
         <Navbar bg="dark" variant="dark" fixed="top">
           {/* {isAuthenticated ? <Navbar bg="dark" variant="dark" fixed="top"> */}
+=======
+        </Modal.Dialog>}
+
+        {isAuthenticated ? <Navbar bg="dark" variant="dark" fixed="top">
+>>>>>>> dev
           <Nav>
             <Nav.Link href="/Home">Head Space</Nav.Link>
             <Nav.Link href="/Profile">Profile</Nav.Link>
             <Nav.Link href="/AboutUs">About Us</Nav.Link>
+<<<<<<< HEAD
             {/* {isAuthenticated ? <LogoutButton /> : <LoginButton />} */}
           </Nav>
         </Navbar>
         {/* </Navbar> : ''} */}
+=======
+            {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+          </Nav>
+        </Navbar> : ''}
+>>>>>>> dev
         <UserProfile />
       </>
     );

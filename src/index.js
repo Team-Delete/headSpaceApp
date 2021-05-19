@@ -6,9 +6,7 @@ import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
 // import {BrowserRouter} from 'react-router-dom';
 
-// function handleStateChange
-//   document.body.style.backgroundcolor
-// }
+import { Auth0Provider } from '@auth0/auth0-react';
 
 ReactDOM.render(
   <Auth0Provider
@@ -18,5 +16,5 @@ ReactDOM.render(
   >
     <App />
   </Auth0Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
