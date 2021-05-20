@@ -34,16 +34,6 @@ const LoginButton = () => {
 };
 
 
-const changeBgColor = () => {
-  return document.body.style.backgroundColor = color;
-};
-
-
-// const changeBgColor = (color) => {
-//   return document.body.style.backgroundColor = color;
-// };
-// console.log(`changing color, ${changeBgColor}`);
-
 class Profile extends React.Component {
   render() {
     const { isAuthenticated } = this.props.auth0;
@@ -60,7 +50,6 @@ class Profile extends React.Component {
             <LoginButton />
           </Modal.Footer>
         </Modal.Dialog>}
-        <Button onClick={changeBgColor('red')}>Pick me</Button>
         {
           isAuthenticated ? <Navbar bg="dark" variant="dark" fixed="top">
             <Nav>

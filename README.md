@@ -1,3 +1,20 @@
+# Welcome to HeadSpace! Here are the variables and links that are pertinent to our app! Thanks for visiting! 
+
+<p>  
+NETLIFY:
+https://headspaceapp.netlify.app/
+HEROKU:
+https://dashboard.heroku.com/apps/headspaceserver
+APP ENV:
+REACT_APP_BACKEND=http://localhost:3002
+SERVER ENV:
+PORT=3002
+MONGODB_URI=mongodb+srv://kassiebradshaw:headspace123@headspace.cknun.mongodb.net/headSpace?retryWrites=true&w=majority
+</p>
+
+
+
+
 # Quick Introduction
 
 ## headSpace is an app that enables users to Vote their feelings through direct interaction with the interface or via mobile device. The prominent vibe will display on the screen with a color and a quote. The Mood will also display local weather and a recommended place IAW the “Mood/WX” combo
