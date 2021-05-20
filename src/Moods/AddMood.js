@@ -42,6 +42,7 @@ class AddMood extends React.Component {
         this.props.updateMoods(response.data);
         alert('Your mood has been submitted!');
       });
+    this.props.hasVoted();
   }
 
   render() {
