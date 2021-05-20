@@ -10,6 +10,10 @@ body {
   overflow-y: hidden;
 }
 
+.modal-dialog{
+  color: black;
+}
+
 .title {
   text-align: center;
   font-weight: 500;
