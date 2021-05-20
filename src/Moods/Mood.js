@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import AddMood from './AddMood.js';
 import UpdateMood from './UpdateMood.js';
 import DeleteMood from './DeleteMood.js';
+import { withAuth0 } from '@auth0/auth0-react';
 
 class Mood extends React.Component {
   constructor(props) {
@@ -18,6 +19,11 @@ class Mood extends React.Component {
       hasVoted: false
     };
   }
+
+  // Helper promise delay, credit goes to Tom McGuire
+  timeout = (delay) => {
+    return new Promise((res) => setTimeout(res, delay));
+  };
 
   componentDidMount() {
     this.getUsersMoods();
@@ -32,11 +38,15 @@ class Mood extends React.Component {
   }
 
   getUsersMoods = async () => {
-    // const SERVER = process.env.REACT_APP_BACKEND;
-    const SERVER = 'http://localhost:3002';
-    const moods = await axios.get(`${SERVER}/moods/${this.state.email}`);
+    while (this.props.auth0.isLoading === true) {
+      await this.timeout(200);
+    }
+    const SERVER = process.env.REACT_APP_BACKEND;
+    const email = this.props.auth0.user.email;
+    const moods = await axios.get(`${SERVER}/moods/${email}`);
     console.log('this is the returned data for moods', moods.data);
     this.setState({ moodsArr: moods.data });
+    this.setState({email: this.props.auth0.user.email});
   }
 
   render() {
@@ -78,4 +88,4 @@ class Mood extends React.Component {
   }
 }
 
-export default Mood;
+export default withAuth0(Mood);
