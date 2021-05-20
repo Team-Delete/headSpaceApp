@@ -8,7 +8,7 @@ class WeatherDay extends React.Component {
       city: '',
       cityData: {},
       weatherData: [],
-    }
+    };
   }
 
   render() {
@@ -19,7 +19,7 @@ class WeatherDay extends React.Component {
         <p>{this.props.weatherData.clouds}</p>
         <p>{this.props.weatherData.temp}</p>
       </>
-    )
+    );
   }
 }
 

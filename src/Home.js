@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Quote from './Quote';
+import Weather from './Weather';
 import Button from 'react-bootstrap/Button';
-// import './App.css';
 import './Home.css';
-// import './MoodRing.css';
-// import MoodRing from './MoodRing';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -16,15 +14,15 @@ class Home extends Component {
       // color: 'Blue',
       // color: 'Red',
       // color: 'Green',
-      button: true,
+      // button: true,
     };
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
-  handleClick(){
-    this.setState({
-      color:!this.state.color
-    });
-  }
+  // handleClick(){
+  //   this.setState({
+  //     color:!this.state.color
+  //   });
+  // }
   // changeBodyBg(color){
   //   document.body.style.background = color;
   // }
@@ -56,14 +54,15 @@ class Home extends Component {
         <Button id='happy' type="button" className ="btn btn-happy">Happy</Button>
         <Button id='sad' type="button" className ="btn btn-sad">Sad</Button>
         {/* <Button color='Yellow' className = "bgchange" onClick={this.state.color(`id="a"`)}>Happy</Button> */}
-        <Button className={this.state.button ? 'buttonTrue': 'buttonFalse'} onClick={this.handleClick}>Excited</Button>
-        {/* <Button id='excited' type="button" className ="btn btn-excited">Excited</Button> */}
+        {/* <Button className={this.state.button ? 'buttonTrue': 'buttonFalse'} onClick={this.handleClick}>Excited</Button> */}
+        <Button id='excited' type="button" className ="btn btn-excited">Excited</Button>
         <Button id='Angry' type="button" className ="btn btn-angry">Angry</Button>
         <Button id='Meh' type="button" className ="btn btn-meh">Meh</Button>
         {/* <button type='button' class='Red'>Red</button> */}
         {/* <button className={`button ${color}`} onClick={() document.body.body=> handleClickButton(props.name)}></button> */}
         {/* <h1>headSpace</h1> */}
         <Quote />
+        <Weather />
         {/* <MoodRing /> */}
         {/* <NavBar /> */}
         <Navbar bg="dark" variant="dark" fixed="top">
