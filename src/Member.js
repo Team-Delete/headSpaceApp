@@ -1,9 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-// import CardDeck from 'react-bootstrap/CardDeck';
-// import ListGroup from 'react-bootstrap/ListGroup';
-// import ListGroupItem from 'react-bootstrap/ListGroupItem';
 
 class Member extends React.Component {
   render() {
