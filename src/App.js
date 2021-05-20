@@ -11,7 +11,6 @@ import {
   Route
 } from 'react-router-dom';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,11 +24,10 @@ class App extends Component {
     console.log('componentDidMount runs');
   }
 
-
   render() {
     const { isAuthenticated } = this.props.auth0;
     return (
-      <>
+      <div>
         <Router>
           <Switch>
             <Route
@@ -49,7 +47,7 @@ class App extends Component {
             </Route>
           </Switch>
         </Router>
-      </>
+      </div>
     );
   }
 }
