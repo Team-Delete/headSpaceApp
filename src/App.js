@@ -10,6 +10,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import Mood from './Moods/Mood.js';
 
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
             </Route>
             <Route exact path="/Profile">
               <Profile />
+              <Mood />
             </Route>
             <Route exact path="/AboutUs">
               <AboutUs />
