@@ -3,13 +3,12 @@
 body {
   /* background: linear-gradient(90deg, lightgreen, lightblue); */
   background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-  font-family: 'Pacifico', sans-serif;
-  color: white;
+  /* font-family: 'Pacifico', sans-serif; */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 100px);
-  overflow-y: hidden;
+  /* height: calc(100vh - 100px); */
+  /* overflow-y: hidden; */
 }
 
 .title {
