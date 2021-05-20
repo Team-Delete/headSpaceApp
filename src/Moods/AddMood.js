@@ -47,7 +47,7 @@ class AddMood extends React.Component {
 
   render() {
     return (
-      <Container id="mood-butttons-container">
+      <Container id="mood-buttons-container">
         <h1>How Are You Feeling Today?</h1>
         <h4>You will be able to see your mood history after submitting!</h4>
         <Button id="happy-button" value="Happy" size="lg" onClick={this.handleCreateMood}>Happy</Button>
