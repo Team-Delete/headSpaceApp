@@ -4,8 +4,7 @@ import { Button, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-
-
+import './Profile.css';
 
 // TO DO //
 
@@ -73,8 +72,9 @@ class Profile extends React.Component {
 
         {isAuthenticated ? <Navbar bg="dark" variant="dark" fixed="top">
           <Nav>
-            <Nav.Link href="/Home">Head Space</Nav.Link>
+            <Nav.Link href="/Home">headSpace</Nav.Link>
             <Nav.Link href="/Profile">Profile</Nav.Link>
+            <Nav.Link href="/Jokes">Jokes</Nav.Link>
             <Nav.Link href="/AboutUs">About Us</Nav.Link>
             {isAuthenticated ? <LogoutButton /> : <LoginButton />}
           </Nav>

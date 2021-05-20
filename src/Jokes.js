@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import './Jokes.css';
 
 class Jokes extends React.Component {
   constructor(props) {
@@ -38,6 +41,15 @@ class Jokes extends React.Component {
         <div id='joke-container'>
           <h6 id='joke--text'>{this.state.jokeData}</h6>
         </div>
+        <Navbar bg="dark" variant="dark" fixed="top">
+          <Nav>
+            <Nav.Link href="/Home">headSpace</Nav.Link>
+            <Nav.Link href="/Profile">Profile</Nav.Link>
+            <Nav.Link href="/Jokes">Jokes</Nav.Link>
+            <Nav.Link href="/AboutUs">About Us</Nav.Link>
+            {/* {isAuthenticated ? <LogoutButton /> : <LoginButton />} */}
+          </Nav>
+        </Navbar>
       </>
     );
   }

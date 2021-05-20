@@ -5,7 +5,8 @@ import Button from 'react-bootstrap/Button';
 import './Home.css';
 // import './MoodRing.css';
 // import MoodRing from './MoodRing';
-// import NavBar from './NavBar';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 class Home extends Component {
   constructor(props) {
@@ -65,6 +66,15 @@ class Home extends Component {
         <Quote />
         {/* <MoodRing /> */}
         {/* <NavBar /> */}
+        <Navbar bg="dark" variant="dark" fixed="top">
+          <Nav>
+            <Nav.Link href="/Home">headSpace</Nav.Link>
+            <Nav.Link href="/Profile">Profile</Nav.Link>
+            <Nav.Link href="/Jokes">Jokes</Nav.Link>
+            <Nav.Link href="/AboutUs">About Us</Nav.Link>
+            {/* {isAuthenticated ? <LogoutButton /> : <LoginButton />} */}
+          </Nav>
+        </Navbar>
 
         <a rel="nofollow" href="https://HeadSpaceApp.netlify.app"><img src="https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2FHeadSpaceApp.netlify.app&chs=180x180&choe=UTF-8&chld=L|2" alt="Login Here" /> </a>
       </div>
