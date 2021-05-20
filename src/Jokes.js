@@ -11,6 +11,10 @@ class Jokes extends React.Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    this.getJoke();
+  }
+
   getJoke = async () => {
     try {
       let jokeData = await axios.get(`https://v2.jokeapi.dev/joke/Programming?format=json&blacklistFlags=nsfw,sexist&type=single&lang=en&amount=1`);
@@ -36,7 +40,7 @@ class Jokes extends React.Component {
     return (
       <>
         <button onClick={this.handleMoodSubmit}>
-          Set Mood + Call Joke API
+          Get another joke!
         </button>
         <div id='joke-container'>
           <h6 id='joke--text'>{this.state.jokeData}</h6>

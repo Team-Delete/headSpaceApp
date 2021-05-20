@@ -32,7 +32,8 @@ class Mood extends React.Component {
   }
 
   getUsersMoods = async () => {
-    const SERVER = process.env.REACT_APP_BACKEND;
+    // const SERVER = process.env.REACT_APP_BACKEND;
+    const SERVER = 'http://localhost:3002';
     const moods = await axios.get(`${SERVER}/moods/${this.state.email}`);
     console.log('this is the returned data for moods', moods.data);
     this.setState({ moodsArr: moods.data });
