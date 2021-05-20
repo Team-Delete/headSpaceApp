@@ -4,8 +4,23 @@ import { Button, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import './Profile.css';
 
+// TO DO //
 
+// Auth0 main frame for initalizing user component
+// axios call for mood updating
+
+// internal links for further page navigation
+
+// QR code in comming and out going linkage
+
+// bootstrap required
+
+// __ DONE__
+// main profile page
+
+console.log('Figureing out where i can start');
 const UserProfile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
@@ -50,16 +65,16 @@ class Profile extends React.Component {
             <LoginButton />
           </Modal.Footer>
         </Modal.Dialog>}
-        {
-          isAuthenticated ? <Navbar bg="dark" variant="dark" fixed="top">
-            <Nav>
-              <Nav.Link href="/Home">Head Space</Nav.Link>
-              <Nav.Link href="/Profile">Profile</Nav.Link>
-              <Nav.Link href="/AboutUs">About Us</Nav.Link>
-              {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-            </Nav>
-          </Navbar> : ''
-        }
+
+        {isAuthenticated ? <Navbar bg="dark" variant="dark" fixed="top">
+          <Nav>
+            <Nav.Link href="/Home">headSpace</Nav.Link>
+            <Nav.Link href="/Profile">Profile</Nav.Link>
+            <Nav.Link href="/Jokes">Jokes</Nav.Link>
+            <Nav.Link href="/AboutUs">About Us</Nav.Link>
+            {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+          </Nav>
+        </Navbar> : ''}
         <UserProfile />
       </>
     );

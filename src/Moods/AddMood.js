@@ -3,6 +3,7 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
+import { withAuth0 } from '@auth0/auth0-react';
 
 class AddMood extends React.Component {
   constructor(props) {
@@ -42,11 +43,12 @@ class AddMood extends React.Component {
         this.props.updateMoods(response.data);
         alert('Your mood has been submitted!');
       });
+    this.props.hasVoted();
   }
 
   render() {
     return (
-      <Container>
+      <Container id="mood-buttons-container">
         <h1>How Are You Feeling Today?</h1>
         <h4>You will be able to see your mood history after submitting!</h4>
         <Button id="happy-button" value="Happy" size="lg" onClick={this.handleCreateMood}>Happy</Button>
@@ -66,4 +68,4 @@ class AddMood extends React.Component {
   }
 }
 
-export default AddMood;
+export default withAuth0(AddMood);

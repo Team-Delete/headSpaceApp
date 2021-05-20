@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import AddMood from './AddMood.js';
 import UpdateMood from './UpdateMood.js';
 import DeleteMood from './DeleteMood.js';
+import { withAuth0 } from '@auth0/auth0-react';
 
 class Mood extends React.Component {
   constructor(props) {
@@ -15,31 +16,50 @@ class Mood extends React.Component {
       mood: '',
       note: '',
       moodsArr: [],
+      hasVoted: false
     };
   }
+
+  // Helper promise delay, credit goes to Tom McGuire
+  timeout = (delay) => {
+    return new Promise((res) => setTimeout(res, delay));
+  };
 
   componentDidMount() {
     this.getUsersMoods();
   }
 
+  hasVoted = () => {
+    this.setState({ hasVoted: true });
+  }
+
   handleUpdateMoods = (update) => {
-    this.setState({moodsArr: update});
+    this.setState({ moodsArr: update });
   }
 
   getUsersMoods = async () => {
+    while (this.props.auth0.isLoading === true) {
+      await this.timeout(200);
+    }
     const SERVER = process.env.REACT_APP_BACKEND;
-    const moods = await axios.get(`${SERVER}/moods/${this.state.email}`);
+    const email = this.props.auth0.user.email;
+    const moods = await axios.get(`${SERVER}/moods/${email}`);
     console.log('this is the returned data for moods', moods.data);
     this.setState({ moodsArr: moods.data });
+    this.setState({email: this.props.auth0.user.email});
   }
 
   render() {
     const data = this.state.moodsArr;
     return (
       <Container id="mood-container">
-        <AddMood
-          updateMoods={this.handleUpdateMoods}
-        />
+        {this.state.hasVoted ?
+          <CardDeck />
+          :
+          <AddMood
+            updateMoods={this.handleUpdateMoods}
+            hasVoted={this.hasVoted}
+          />}
         <CardDeck>
           {data.map((mood, idx) => (
             <Card className="card" key={idx}>
@@ -68,4 +88,4 @@ class Mood extends React.Component {
   }
 }
 
-export default Mood;
+export default withAuth0(Mood);

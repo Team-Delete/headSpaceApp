@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Lobster&family=Mr+Dafoe&family=Oswald&family=Pacifico&display=swap');
 
 body {
-  /* background: linear-gradient(90deg, lightgreen, lightblue); */
   background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-  font-family: 'Pacifico', sans-serif;
+  font-family: 'Mr+Dafoe', sans-serif;
   color: white;
   display: flex;
   justify-content: center;
@@ -14,7 +13,7 @@ body {
 
 a {
   display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     padding: 25px;
 }
 
@@ -26,37 +25,29 @@ a {
 }
 
 .title {
-  font-family: 'Pacifico', sans-serif;
-  font-size: 88px;
   text-align: center;
   font-weight: 500;
 }
 
-#quote-box {
-  font-family: 'Lobster', cursive;
+#joke-container {
+  font-family: 'Oswalt', serif;
   width: 1400px;
   margin: 0 auto;
   padding: 1px 15px;
   font-weight: 550;
-  font-size: 44px;
-  /* background: white; */
-  /* background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
-  /* background: linear-gradient(35deg, #CCFFFF, #FFCCCC); */
+  font-size: 88px;
   text-align: center;
   border-radius: 20px;
   box-shadow: 0px 0px 2px 1px gray;
 }
 
+#joke--text {
+  font-size: 64px;
+}
+
 #text p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
-}
-
-#author h5 {
-  font-family: 'Allura', cursive;
-  font-size: 64px;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
 }
 
 #buttons {
@@ -105,52 +96,11 @@ a {
   color: black;
 }
 
-/* .buttonTrue, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color: #2ecc71 !important;
-  color: black;
-  }
-  #quote-box {
-  /* background: #2ecc71; */
-    /* background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
-  /* display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #000;
-  background-color: yellow;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999; */
-/* } */
-
-/* .buttonFalse, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color: #2ecc71 !important;
-  }
-  #quote-box {
-    /* background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
-    /* background: #2ecc71; */
-    /* display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: red;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999; */
-  /* } */
-
 @media only screen and (max-width: 450px) {
   .title {
     font-size: 22px;
   }
-  /* #quote-box {
+  #quote-box {
     width: 270px;
-  } */
+  }
 }
