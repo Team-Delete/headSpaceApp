@@ -29,7 +29,7 @@ class Weather extends React.Component {
       });
       this.setState({
         weatherData: weatherData.data[0]
-      })
+      });
     } catch (err) {
       console.log(`error found!!! ${err.message}`);
       this.setState({ error: `${err.message}: ${err.message.data}` });
@@ -41,7 +41,7 @@ class Weather extends React.Component {
       <>
         <WeatherDay weatherData={this.state.weatherData} />
       </>
-    )
+    );
   }
 }
 

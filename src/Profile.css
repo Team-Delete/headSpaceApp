@@ -3,15 +3,23 @@
 body {
   background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
   font-family: 'Pacifico', sans-serif;
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 100px);
-  overflow-y: hidden;
+  overflow-y: hidden; */
 }
 
-.modal-dialog{
+.modal-dialog {
   color: black;
+}
+
+#mood-container {
+  display: block;
+}
+
+#mood-buttons-container {
+  display: block;
 }
 
 .title {
@@ -44,9 +52,9 @@ body {
   .title {
     font-size: 22px;
   }
-  #quote-box {
+  /* #quote-box {
     width: 270px;
-  }
+  } */
 }
 
 .card {

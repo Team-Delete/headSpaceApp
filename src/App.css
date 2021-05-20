@@ -3,12 +3,27 @@
 body {
   background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
   font-family: 'Pacifico', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   /* height: calc(100vh - 100px); */
   /* overflow-y: hidden; */
 }
+
+/* #quote-box {
+  font-family: 'Lobster', cursive;
+  width: 1400px;
+  margin: 0 auto;
+  padding: 1px 15px;
+  font-weight: 550;
+  font-size: 44px;
+  /* background: white; */
+  /* background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
+  /* background: linear-gradient(35deg, #CCFFFF, #FFCCCC); */
+  /* text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 2px 1px gray;
+/* } */ */ */
 
 .title {
   text-align: center;
@@ -40,9 +55,9 @@ body {
   .title {
     font-size: 22px;
   }
-  #quote-box {
+  /* #quote-box {
     width: 270px;
-  }
+  } */
 }
 
 .card {
@@ -51,7 +66,7 @@ body {
   text-align: justify;
 }
 
-#submit-mood {
+/* #submit-mood {
   margin: 15px;
 }
 
@@ -102,4 +117,4 @@ body {
   background-color: gray;
   border: 3px solid purple;
   margin: 5px;
-}
+} */

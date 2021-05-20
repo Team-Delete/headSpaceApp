@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Lobster&family=Mr+Dafoe&family=Oswald&family=Pacifico&display=swap');
 
 body {
-  /* background: linear-gradient(90deg, lightgreen, lightblue); */
   background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
   font-family: 'Mr+Dafoe', sans-serif;
   color: white;
@@ -37,7 +36,6 @@ a {
   padding: 1px 15px;
   font-weight: 550;
   font-size: 88px;
-  /* background: linear-gradient(35deg, #CCFFFF, #FFCCCC); */
   text-align: center;
   border-radius: 20px;
   box-shadow: 0px 0px 2px 1px gray;
@@ -96,47 +94,6 @@ a {
 .btn-meh, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #e67e22 !important;
   color: black;
-}
-
-.buttonTrue, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color: #2ecc71 !important;
-  color: black;
-  }
-  #quote-box {
-  /* background: #2ecc71; */
-    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-  /* display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #000;
-  background-color: yellow;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999; */
-}
-
-.buttonFalse, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color: #2ecc71 !important;
-  }
-  #quote-box {
-    /* background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
-    background: #2ecc71;
-    /* display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: red;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999; */
 }
 
 @media only screen and (max-width: 450px) {

@@ -39,6 +39,8 @@ a {
   padding: 1px 15px;
   font-weight: 550;
   font-size: 44px;
+  /* background: white; */
+  /* background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
   /* background: linear-gradient(35deg, #CCFFFF, #FFCCCC); */
   text-align: center;
   border-radius: 20px;
@@ -103,13 +105,13 @@ a {
   color: black;
 }
 
-.buttonTrue, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+/* .buttonTrue, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #2ecc71 !important;
   color: black;
   }
   #quote-box {
   /* background: #2ecc71; */
-    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    /* background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
   /* display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -122,14 +124,14 @@ a {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999; */
-}
+/* } */
 
-.buttonFalse, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+/* .buttonFalse, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #2ecc71 !important;
   }
   #quote-box {
     /* background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
-    background: #2ecc71;
+    /* background: #2ecc71; */
     /* display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -142,13 +144,13 @@ a {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999; */
-}
+  /* } */
 
 @media only screen and (max-width: 450px) {
   .title {
     font-size: 22px;
   }
-  #quote-box {
+  /* #quote-box {
     width: 270px;
-  }
+  } */
 }
