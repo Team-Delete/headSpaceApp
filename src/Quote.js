@@ -35,7 +35,7 @@ class Quote extends Component {
   // }
 
   getQuote() {
-    axios.get('https://goquotes-api.herokuapp.com/api/v1/all/quotes')
+    axios.get('https://goquotes-api.herokuapp.com/api/v1/random?count=50')
       .then(res => {
         let data = res.data.quotes;
         let quoteNum = Math.floor(Math.random() * data.length);
