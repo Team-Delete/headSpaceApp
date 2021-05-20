@@ -15,9 +15,7 @@ class WeatherDay extends React.Component {
     console.log(this.props.weatherData);
     return (
       <>
-        <p>{this.props.weatherData.description}</p>
-        <p>{this.props.weatherData.clouds}</p>
-        <p>{this.props.weatherData.temp}</p>
+        <h4>Today in Seattle: {this.props.weatherData.temp}, {this.props.weatherData.description}</h4>
       </>
     );
   }

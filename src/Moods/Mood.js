@@ -46,7 +46,7 @@ class Mood extends React.Component {
     const moods = await axios.get(`${SERVER}/moods/${email}`);
     console.log('this is the returned data for moods', moods.data);
     this.setState({ moodsArr: moods.data });
-    this.setState({email: this.props.auth0.user.email});
+    this.setState({ email: this.props.auth0.user.email });
   }
 
   render() {
@@ -54,35 +54,34 @@ class Mood extends React.Component {
     return (
       <Container id="mood-container">
         {this.state.hasVoted ?
-          <CardDeck />
+          <CardDeck>
+            {data.map((mood, idx) => (
+              <Card className="card" key={idx}>
+                <Card.Body>
+                  <Card.Title>{mood.mood}</Card.Title>
+                  <Card.Text>{mood.note}</Card.Text>
+                </Card.Body>
+                <UpdateMood
+                  moodId={mood._id}
+                  email={this.state.email}
+                  mood={mood.mood}
+                  note={mood.note}
+                  updateMoods={this.handleUpdateMoods}
+                />
+                <DeleteMood
+                  moodId={mood._id}
+                  email={this.state.email}
+                  moodList={this.state.moodsArr}
+                  updateMoods={this.handleUpdateMoods}
+                />
+              </Card>
+            ))}
+          </CardDeck>
           :
           <AddMood
             updateMoods={this.handleUpdateMoods}
             hasVoted={this.hasVoted}
           />}
-        <CardDeck>
-          {data.map((mood, idx) => (
-            <Card className="card" key={idx}>
-              <Card.Body>
-                <Card.Title>{mood.mood}</Card.Title>
-                <Card.Text>{mood.note}</Card.Text>
-              </Card.Body>
-              <UpdateMood
-                moodId={mood._id}
-                email={this.state.email}
-                mood={mood.mood}
-                note={mood.note}
-                updateMoods={this.handleUpdateMoods}
-              />
-              <DeleteMood
-                moodId={mood._id}
-                email={this.state.email}
-                moodList={this.state.moodsArr}
-                updateMoods={this.handleUpdateMoods}
-              />
-            </Card>
-          ))}
-        </CardDeck>
       </Container>
     );
   }
