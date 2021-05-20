@@ -15,6 +15,7 @@ class Mood extends React.Component {
       mood: '',
       note: '',
       moodsArr: [],
+      hasVoted: false
     };
   }
 
@@ -22,8 +23,12 @@ class Mood extends React.Component {
     this.getUsersMoods();
   }
 
+  hasVoted = () => {
+    this.setState({ hasVoted: true });
+  }
+
   handleUpdateMoods = (update) => {
-    this.setState({moodsArr: update});
+    this.setState({ moodsArr: update });
   }
 
   getUsersMoods = async () => {
@@ -37,9 +42,13 @@ class Mood extends React.Component {
     const data = this.state.moodsArr;
     return (
       <Container id="mood-container">
-        <AddMood
-          updateMoods={this.handleUpdateMoods}
-        />
+        {this.state.hasVoted ?
+          <CardDeck />
+          :
+          <AddMood
+            updateMoods={this.handleUpdateMoods}
+            hasVoted={this.hasVoted}
+          />}
         <CardDeck>
           {data.map((mood, idx) => (
             <Card className="card" key={idx}>
