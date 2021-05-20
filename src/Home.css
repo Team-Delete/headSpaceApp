@@ -77,27 +77,33 @@ a {
 }
 
 .btn-happy, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color: #f1c40f !important;
+  background-color: yellow !important;
+  color: black;
 }
 
 .btn-sad, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color: #3498db !important;
+  background-color: blue !important;
+  color: black;
 }
 
 .btn-excited, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #2ecc71 !important;
+  color: black;
 }
 
 .btn-angry, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #e74c3c !important;
+  color: black;
 }
 
 .btn-meh, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #e67e22 !important;
+  color: black;
 }
 
 .buttonTrue, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #2ecc71 !important;
+  color: black;
   }
   #quote-box {
   /* background: #2ecc71; */

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Quote from './Quote';
 import Button from 'react-bootstrap/Button';
-import './App.css';
+// import './App.css';
 import './Home.css';
 // import './MoodRing.css';
 // import MoodRing from './MoodRing';
@@ -52,7 +52,7 @@ class Home extends Component {
       // <div className="container">
       <div>
         {/* <div className = {this.state.color}> */}
-        <Button id='happy' type="button" className ="btn btn-happpy">Happy</Button>
+        <Button id='happy' type="button" className ="btn btn-happy">Happy</Button>
         <Button id='sad' type="button" className ="btn btn-sad">Sad</Button>
         {/* <Button color='Yellow' className = "bgchange" onClick={this.state.color(`id="a"`)}>Happy</Button> */}
         <Button className={this.state.button ? 'buttonTrue': 'buttonFalse'} onClick={this.handleClick}>Excited</Button>

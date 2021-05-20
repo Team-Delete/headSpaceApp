@@ -3,7 +3,7 @@
 body {
   background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
   font-family: 'Pacifico', sans-serif;
-  color: white;
+  /* color: white; */
   display: flex;
   justify-content: center;
   align-items: center;
