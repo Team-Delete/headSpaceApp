@@ -3,6 +3,7 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import { withAuth0 } from '@auth0/auth0-react';
 
 class UpdateNote extends React.Component {
   constructor(props) {
@@ -14,6 +15,11 @@ class UpdateNote extends React.Component {
     };
   }
 
+  // Helper promise delay, credit goes to Tom McGuire
+  timeout = (delay) => {
+    return new Promise((res) => setTimeout(res, delay));
+  };
+
   handleShowModal = () => {
     this.setState({ showModal: true });
   }
@@ -23,13 +29,18 @@ class UpdateNote extends React.Component {
   }
 
   updateNoteState = (event) => {
-    this.setState({noteState: event.target.value});
+    this.setState({ noteState: event.target.value });
   }
 
-  handleUpdateNote = (event) => {
+  handleUpdateNote = async (event) => {
     event.preventDefault();
+    while (this.props.auth0.isLodaing === true) {
+      await this.timeout(200);
+    }
     const SERVER = process.env.REACT_APP_BACKEND;
-    axios.put(`${SERVER}/moods/${this.props.moodId}?email=${this.props.email}`, {
+    const email = this.props.auth0.user.email;
+    axios.put(`${SERVER}/moods/${this.props.moodId}?email=${this.props.auth0.user.email}`, {
+      email: (email),
       mood: this.props.mood,
       note: this.state.noteState
     }).then((response) => {
@@ -62,4 +73,4 @@ class UpdateNote extends React.Component {
   }
 }
 
-export default UpdateNote;
+export default withAuth0(UpdateNote);

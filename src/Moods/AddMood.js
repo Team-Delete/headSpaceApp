@@ -3,6 +3,7 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
+import { withAuth0 } from '@auth0/auth0-react';
 
 class AddMood extends React.Component {
   constructor(props) {
@@ -67,4 +68,4 @@ class AddMood extends React.Component {
   }
 }
 
-export default AddMood;
+export default withAuth0(AddMood);
