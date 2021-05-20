@@ -13,7 +13,7 @@ class Jokes extends React.Component {
 
   getJoke = async () => {
     try {
-      let jokeData = await axios.get(`https://v2.jokeapi.dev/joke/Dark?format=json&blacklistFlags=nsfw,sexist&type=single&lang=en&amount=1`);
+      let jokeData = await axios.get(`https://v2.jokeapi.dev/joke/Programming?format=json&blacklistFlags=nsfw,sexist&type=single&lang=en&amount=1`);
       // console.log(jokeData.data.joke);
       this.setState({ jokeData: jokeData.data.joke });
     } catch (err) {
