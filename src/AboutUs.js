@@ -11,6 +11,7 @@ class AboutUs extends React.Component {
         <NavBar />
         <h1 className="title">About us</h1>
         <CardDeck>
+          {/* Good use of components here */}
           <Member
             name="Adrian Milsap"
             imgSrc="adrian.png"

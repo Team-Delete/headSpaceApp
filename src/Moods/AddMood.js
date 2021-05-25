@@ -35,12 +35,16 @@ class AddMood extends React.Component {
 
   handleAddMood = () => {
     axios.post(`${process.env.REACT_APP_BACKEND}/moods`, {
-      email: this.state.email,
+      // this.state.email is literally always kassie.r.bradshaw@gmail.com.
+      // this will break for literally any other logged in user.
+      // this needs to use auth0 to get the correct email address.
+      email: this.props.auth0.user.email,
       mood: this.state.mood,
       note: this.state.note,
     })
       .then((response) => {
         this.props.updateMoods(response.data);
+        // alerts are not generally a good UI pattern in a React app
         alert('Your mood has been submitted!');
       });
     this.props.hasVoted();
@@ -56,6 +60,8 @@ class AddMood extends React.Component {
         <Button id="excited-button" value="Excited" size="lg" onClick={this.handleCreateMood}>Excited</Button>
         <Button id="angry-button" value="Angry" size="lg" onClick={this.handleCreateMood}>Angry</Button>
         <Button id="meh-button" value="Meh" size="lg" onClick={this.handleCreateMood}>Meh</Button>
+        {/* You should be listening for onSubmit on the form, not onClick on the button. */}
+        {/* You're also getting an error in your console because you don't preventDefault. */}
         <Form>
           <Form.Group controlId="notesForm">
             <Form.Label>Add a note about how you are feeling and save it to your history:</Form.Label>

@@ -58,9 +58,6 @@ class Home extends Component {
         <Button id='excited' type="button" className ="btn btn-excited">Excited</Button>
         <Button id='Angry' type="button" className ="btn btn-angry">Angry</Button>
         <Button id='Meh' type="button" className ="btn btn-meh">Meh</Button>
-        {/* <button type='button' class='Red'>Red</button> */}
-        {/* <button className={`button ${color}`} onClick={() document.body.body=> handleClickButton(props.name)}></button> */}
-        {/* <h1>headSpace</h1> */}
         <Quote />
         <Weather />
         {/* <MoodRing /> */}

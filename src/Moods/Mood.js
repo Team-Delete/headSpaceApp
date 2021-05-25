@@ -30,6 +30,7 @@ class Mood extends React.Component {
   }
 
   hasVoted = () => {
+    // it's a little weird to hide that form, but fine
     this.setState({ hasVoted: true });
   }
 

@@ -20,7 +20,6 @@ import './Profile.css';
 // __ DONE__
 // main profile page
 
-console.log('Figureing out where i can start');
 const UserProfile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 

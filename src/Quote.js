@@ -35,6 +35,7 @@ class Quote extends Component {
   // }
 
   getQuote() {
+    // Looks like this API is down, although that's not y'all's fault.
     axios.get('https://goquotes-api.herokuapp.com/api/v1/random?count=50')
       .then(res => {
         let data = res.data.quotes;

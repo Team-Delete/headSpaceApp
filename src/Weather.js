@@ -21,6 +21,7 @@ class Weather extends React.Component {
 
   getWeatherData = async () => {
     try {
+      // This should not be hardcoded to 3002; this means that your weather is broken on Netlify.
       let weatherData = await axios.get(`http://localhost:3002/weather`, {
         params: {
           lat: '47.606',
